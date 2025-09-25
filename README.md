@@ -75,6 +75,27 @@ _No `policyExemptionSummary.csv`._
 - `Storage Blob Data Contributor` (on the Storage Account)
 
 **Tools:** PowerShell 7.x, Azure CLI 2.49+ with `resource-graph` extension
+> **Note**  
+> If you get an error like:
+> 
+> ```
+> File ...\healthcheck.ps1 cannot be loaded. The file ...\healthcheck.ps1 is not digitally signed.
+> You cannot run this script on the current system.
+> ```
+> 
+> This is caused by the default PowerShell Execution Policy.  
+> To run the script without changing global settings, open PowerShell and run:
+> 
+> ```powershell
+> Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+> .\scripts\tools\healthcheck.ps1
+> ```
+> 
+> Alternatively, you can launch the script directly:
+> 
+> ```powershell
+> powershell.exe -ExecutionPolicy Bypass -File .\scripts\tools\healthcheck.ps1
+> ```
 
 Login and set context:
 ```bash
