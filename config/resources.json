@@ -1,0 +1,29 @@
+{
+  "location": "northeurope",
+  "resource_group_name": "rg-apea-northeurope-001",
+
+  "automation_account_name": "aa-apea-northeurope-001",
+  "storage_account_name": "saapeanortheurope001",
+  "storage_container_name": "azreports",
+  "storage_folder_prefix": "policy-compliance",
+
+  "log_analytics_workspace_name": "la-apea-northeurope-001",
+
+
+  "user_assigned_identity_resource_id": "",
+  "log_analytics_workspace_resource_id": "",
+
+  "hybrid_worker_group_name": "apea-hybrid-worker-group",
+
+  "tags": {
+    "ap.project": "APEA",
+    "ap.owner": "bootstrap"
+  },
+
+  "use_avm_storage_module": false,
+  "storage_shared_access_key_enabled": false,
+  "storage_network_rules": {
+    "default_action": "Deny",
+    "bypass": ["AzureServices"]
+  }
+}
